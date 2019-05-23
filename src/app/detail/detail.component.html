@@ -1,0 +1,19 @@
+<div *ngIf="_data.dataClean[id] != undefined" class="card complete-post">
+  <div class="card-body">
+    <p><small class="text-muted">Posted by {{_data.dataClean[id]["author"]}} | </small><small class="text-muted">{{_data.timeSince(_data.dataClean[id]["timestamp"])}}</small></p>
+  <h5 class="card-title">{{_data.dataClean[id]['title']}}</h5>
+  <div *ngIf='_data.dataClean[id]["type"] === "image"'>
+    <img src="{{_data.dataClean[id]['url']}}" class="card-img-top thumb-image" alt="">
+  </div>
+  <div *ngIf='_data.dataClean[id]["type"] == "video" '>
+   <iframe class="video" width="auto" height="300" [src]="_data.transform(_data.dataClean[id]['url'].replace('/watch?v=', '/embed/').replace('https://youtu.be/','https://www.youtube.com/embed/'))" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+    <p class="card-text">{{_data.dataClean[id]['text']}}</p>
+    <div *ngIf='_data.dataClean[id]["type"] == "post"'>
+      <a href="{{_data.dataClean[id]['url']}}" class="btn btn-outline-primary" target="_blank">Accede a la noticia</a>
+    </div>
+  </div>
+</div>
+<div *ngIf="_data.dataClean[id] === undefined" class="spinner-border" role="status">
+  <span class="sr-only">Loading...</span>
+</div>

@@ -1,0 +1,20 @@
+<nav class="navbar fixed-top navbar-light bg-light">
+  <img src="/assets/reddit-logo.png" height="45px" class="logo" [routerLink]="['/home/']">
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</nav>
+<div class="separador">
+
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-8">
+      <router-outlet></router-outlet>
+    </div>
+    <div class="col-4 sidebar">
+      <app-sidebar></app-sidebar>
+    </div>
+  </div>
+</div>
