@@ -1,6 +1,18 @@
+<img src="https://raw.githubusercontent.com/gothinkster/angular-realworld-example-app/master/logo.png">
+<h2>This app created with Angular, has a real world example for using with de JSON of <a href="http://www.reddit.com" target="_blank">Reddit</a> mixed with the style of <a href="http://www.bootstrap.com" target="_blank">Bootstrap</a>
+
 # Reddit
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
+
+## Change reddit JSON
+
+You can try your own reddit JSON. Follow the next steps:
+  1. Visit the subreddit taht you prefer
+  2. Add at the end of the url of the subreddit<b> "new.json"</b>
+  3. You will have and obj() of the first 25 publications
+  
+Next step, you need to access to the service called <b>"api.service"</b> and in the GET method change the url with the subreddit that you prefer.
 
 ## Development server
 
@@ -22,6 +34,6 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+## Further help of Angular
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
